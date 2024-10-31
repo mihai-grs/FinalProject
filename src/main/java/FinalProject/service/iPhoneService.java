@@ -1,17 +1,17 @@
 package FinalProject.service;
 
+import FinalProject.exception.iPhoneNotFoundException;
 import FinalProject.model.iPhone;
 import FinalProject.model.iPhoneCreateDto;
 import FinalProject.model.iPhoneReturnDto;
 import FinalProject.model.iPhoneUpdateDto;
 import FinalProject.repository.iPhoneRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,26 +23,39 @@ public class iPhoneService {
     private iPhoneRepository iphoneRepository;
 
 
-    public iPhone createiPhone(iPhoneCreateDto iphoneDto) {
+    public iPhoneReturnDto createiPhone(iPhoneCreateDto iphoneDto) {
         iPhone iphone = new iPhone();
         iphone.setModelName(iphoneDto.getModelName());
         iphone.setStorage(iphoneDto.getStorage());
         iphone.setColor(iphoneDto.getColor());
 
-        return iphoneRepository.save(iphone);
+        iPhone savediPhone = iphoneRepository.save(iphone);
+        return mapToReturnDto(savediPhone);
     }
 
     public iPhoneReturnDto getiPhoneById(Long id) {
         iPhone iphone = iphoneRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("iPhone can't be found by id: " + id));
+                .orElseThrow(() -> new iPhoneNotFoundException(id));
 
         return mapToReturnDto(iphone);
     }
 
 
     public List<iPhoneReturnDto> getAlliPhones(Pageable pageable) {
-        return iphoneRepository.findAll(pageable)
+       return iphoneRepository.findAll(pageable)
                 .stream()
+               .map(this::mapToReturnDto)
+                .collect(Collectors.toList());
+   }
+
+    public Page<iPhoneReturnDto> getAlliPhonesPaged(Pageable pageable) {
+        Page<iPhone> phonesPage = iphoneRepository.findAll(pageable);
+        return phonesPage.map(this::mapToReturnDto);
+    }
+
+    public List<iPhoneReturnDto> getAllIPhonesSortedById() {
+        List<iPhone> iphones = iphoneRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
+        return iphones.stream()
                 .map(this::mapToReturnDto)
                 .collect(Collectors.toList());
     }
@@ -52,6 +65,7 @@ public class iPhoneService {
 
         iPhone iphone = iphoneRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("iPhone can't be found by id: " + id));
+
         iphone.setModelName(iphoneDetails.getModelName());
         iphone.setColor(iphoneDetails.getColor());
         iphone.setStorage(iphoneDetails.getStorage());
@@ -59,8 +73,6 @@ public class iPhoneService {
         iphone.setPrice(iphoneDetails.getPrice());
         iphone.setStock(iphoneDetails.getStock());
         iphone.setImage(iphoneDetails.getImage());
-//        LocalDate releaseDate = LocalDate.parse(iphoneDetails.getReleaseDate().toString(), DateTimeFormatter.ISO_LOCAL_DATE);
-//        iphone.setReleaseDate(releaseDate);
 
         iPhone updatediPhone = iphoneRepository.save(iphone);
         return mapToReturnDto(updatediPhone);
@@ -69,7 +81,7 @@ public class iPhoneService {
 
     public void deleteiPhone(Long id) {
         iPhone iphone = iphoneRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("iPhone can't be found by id: " + id));
+               .orElseThrow(() -> new iPhoneNotFoundException(id));
 
         iphoneRepository.delete(iphone);
     }

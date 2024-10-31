@@ -1,8 +1,13 @@
 package FinalProject.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 
 @Data
+@Setter
+@Getter
 public class iPhoneCreateDto {
 
     private String modelName;
@@ -10,27 +15,4 @@ public class iPhoneCreateDto {
     private Integer storage;
 
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getModelName() {
-        return modelName;
-    }
-
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    public Integer getStorage() {
-        return storage;
-    }
-
-    public void setStorage(Integer storage) {
-        this.storage = storage;
-    }
 }

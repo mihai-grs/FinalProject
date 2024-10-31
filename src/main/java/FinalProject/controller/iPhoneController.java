@@ -24,6 +24,7 @@ public class iPhoneController {
     @GetMapping("/iphones")
     public List<iPhoneReturnDto> getAlliPhones(Pageable pageable) {
         return iphoneService.getAlliPhones(pageable);
+
     }
 
 
@@ -41,7 +42,7 @@ public class iPhoneController {
 
     @PostMapping("/iphones")
     public ResponseEntity<iPhoneReturnDto> createiPhone(@RequestBody @Validated iPhoneCreateDto iphoneCreateDto) {
-        iPhoneReturnDto creatediPhone = iphoneService.mapToReturnDto(iphoneService.createiPhone(iphoneCreateDto));
+        iPhoneReturnDto creatediPhone = iphoneService.createiPhone(iphoneCreateDto);
         return new ResponseEntity<>(creatediPhone, HttpStatus.CREATED);
     }
 
