@@ -42,11 +42,11 @@ public class iPhoneService {
 
 
     public List<iPhoneReturnDto> getAlliPhones(Pageable pageable) {
-       return iphoneRepository.findAll(pageable)
+        return iphoneRepository.findAll(pageable)
                 .stream()
-               .map(this::mapToReturnDto)
+                .map(this::mapToReturnDto)
                 .collect(Collectors.toList());
-   }
+    }
 
     public Page<iPhoneReturnDto> getAlliPhonesPaged(Pageable pageable) {
         Page<iPhone> phonesPage = iphoneRepository.findAll(pageable);
@@ -81,7 +81,7 @@ public class iPhoneService {
 
     public void deleteiPhone(Long id) {
         iPhone iphone = iphoneRepository.findById(id)
-               .orElseThrow(() -> new iPhoneNotFoundException(id));
+                .orElseThrow(() -> new iPhoneNotFoundException(id));
 
         iphoneRepository.delete(iphone);
     }

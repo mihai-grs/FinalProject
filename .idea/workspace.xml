@@ -4,37 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fb423a0-84a0-4077-a998-3c32d20c06fa" name="Changes" comment="Second commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneMvcController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/exception/OrderNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/exception/iPhoneNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/MyUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/MyUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/iphone.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FinalProject/service/iPhoneServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="9fb423a0-84a0-4077-a998-3c32d20c06fa" name="Changes" comment="Another commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/config/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneCreateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneReturnDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneReturnDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneUpdateDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/repository/iPhoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/iPhoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/service/iPhoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/iPhoneService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/gradle.properties.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +55,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mihai-grs&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mihai-grs/FinalProject.git&quot;,
+    &quot;accountId&quot;: &quot;584e11aa-6a08-47a6-996d-e44ad2839542&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -298,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730389273364</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Another commit">
+      <option name="closed" value="true" />
+      <created>1730406827148</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730406827148</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,7 +311,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
+    <MESSAGE value="Another commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,6 +15,7 @@ import FinalProject.model.iPhoneReturnDto;
 public class iPhoneMvcController {
     @Autowired
     private iPhoneService iPhoneService;
+
     @GetMapping("/iphones/view")
     public String getAlliPhones(Model model, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         Page<iPhoneReturnDto> page = iPhoneService.getAlliPhonesPaged(pageable);
