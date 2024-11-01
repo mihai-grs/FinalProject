@@ -17,7 +17,7 @@ public class iPhoneMvcController {
     private iPhoneService iPhoneService;
 
     @GetMapping("/iphones/view")
-    public String getAlliPhones(Model model, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+    public String getAlliPhones(Model model,@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         Page<iPhoneReturnDto> page = iPhoneService.getAlliPhonesPaged(pageable);
         model.addAttribute("iphoneList", page.getContent());
         model.addAttribute("currentPage", page.getNumber());
