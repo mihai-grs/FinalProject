@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fb423a0-84a0-4077-a998-3c32d20c06fa" name="Changes" comment="Another commit" />
+    <list default="true" id="9fb423a0-84a0-4077-a998-3c32d20c06fa" name="Changes" comment="Another commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/OrderDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/checkout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/iphone-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/order-confirmation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/FinalProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/FinalProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneMvcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/controller/iPhoneMvcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/model/iPhoneCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/repository/iPhoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/repository/iPhoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FinalProject/service/iPhoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FinalProject/service/iPhoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/iphone.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/iphone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,10 +70,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="AnnotationType" />
         <option value="JUnit5 Test Class" />
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -104,6 +136,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="FinalProject.model" />
       <recent name="FinalProject.service" />
       <recent name="FinalProject.exception" />
     </key>
@@ -238,8 +271,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FinalProjectApplication" />
         <item itemvalue="Gradle.iPhoneServiceTest" />
+        <item itemvalue="Application.FinalProjectApplication" />
         <item itemvalue="Gradle.iPhoneServiceTest.testGetiPhoneById" />
         <item itemvalue="Gradle.iPhoneServiceTest.testUpdateiPhone" />
         <item itemvalue="Gradle.iPhoneServiceTest.testCreateiPhone" />
@@ -303,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730468630124</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Another commit">
+      <option name="closed" value="true" />
+      <created>1730473303119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730473303119</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

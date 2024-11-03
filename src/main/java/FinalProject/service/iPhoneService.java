@@ -28,6 +28,10 @@ public class iPhoneService {
         iphone.setModelName(iphoneDto.getModelName());
         iphone.setStorage(iphoneDto.getStorage());
         iphone.setColor(iphoneDto.getColor());
+        iphone.setReleaseDate(iphoneDto.getReleaseDate());
+        iphone.setPrice(iphoneDto.getPrice());
+        iphone.setStock(iphoneDto.getStock());
+        iphone.setImage(iphoneDto.getImage());
 
         iPhone savediPhone = iphoneRepository.save(iphone);
         return mapToReturnDto(savediPhone);
@@ -104,6 +108,21 @@ public class iPhoneService {
         iPhone iphone = iphoneRepository.findByModelName(modelName)
                 .orElseThrow(() -> new RuntimeException("iPhone can't be found by model name: " + modelName));
         return mapToReturnDto(iphone);
+    }
+
+    public boolean existsById(Long id) {
+        return iphoneRepository.existsById(id);
+    }
+    public Long getFirstiPhoneId() {
+        return iphoneRepository.findAll(Sort.by(Sort.Direction.ASC, "id"))
+                .stream()
+                .findFirst()
+                .map(iPhone::getId)
+                .orElseThrow(() -> new RuntimeException("No products available."));
+    }
+
+    public List<iPhone> searchiPhones(String query) {
+        return iphoneRepository.findByModelNameContainingIgnoreCase(query);
     }
 
 }

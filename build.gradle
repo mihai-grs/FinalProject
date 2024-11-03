@@ -30,6 +30,8 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-security"
     implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.6.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
 
     testCompileOnly 'org.projectlombok:lombok:1.18.34'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'

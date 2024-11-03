@@ -30,7 +30,8 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/login", "/register", "/home").permitAll()
-                        .requestMatchers("/iphones/**").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/iphones/update/**", "/iphones/create").hasRole("ADMIN")
+                        .requestMatchers("/iphone/view", "/cart/**").hasAnyRole("USER", "ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
@@ -43,6 +44,7 @@ public class SecurityConfig {
                         .logoutSuccessUrl("/login?logout")
                         .permitAll()
                 );
+
         return http.build();
     }
 

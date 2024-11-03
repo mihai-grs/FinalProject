@@ -19,6 +19,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate orderDate;
+    private String firstName;
+    private String lastName;
+    private String address1;
+    private String address2;
+    private String paymentMethod;
+    @Column(name = "total_price", nullable = false)
+    private double totalPrice;
 
     @ManyToMany
     @JoinTable(name = "order_iphones",

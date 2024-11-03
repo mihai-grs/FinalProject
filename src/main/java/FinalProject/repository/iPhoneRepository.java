@@ -15,5 +15,6 @@ public interface iPhoneRepository extends JpaRepository<iPhone, Long> {
     Page<iPhone> findAll(Pageable pageable);
     Optional<iPhone> findByModelName(String modelName);
     List<iPhone> findAll(Sort sort);
+    List<iPhone> findByModelNameContainingIgnoreCase(String modelName);
 
 }

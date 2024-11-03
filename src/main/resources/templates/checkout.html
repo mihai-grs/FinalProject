@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .checkout-container {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .checkout-container h2 {
+            color: #007bff;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-label {
+            font-weight: 500;
+            color: #4a4a4a;
+        }
+        .form-control, .form-select {
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+        .total-price {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold;
+            text-align: right;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+        .btn-back {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            background-color: #6c757d;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="checkout-container">
+    <h2>Informații Comandă</h2>
+    <form th:action="@{/orders/submit}" th:object="${orderDto}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Prenume</label>
+            <input type="text" class="form-control" th:field="*{firstName}" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nume</label>
+            <input type="text" class="form-control" th:field="*{lastName}" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Adresă 1</label>
+            <input type="text" class="form-control" th:field="*{address1}" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Adresă 2</label>
+            <input type="text" class="form-control" th:field="*{address2}">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Modalitate de plată</label>
+            <select class="form-select" th:field="*{paymentMethod}">
+                <option value="cash">Cash</option>
+                <option value="card">Card</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Total de plată</label>
+            <p class="total-price" th:text="${totalPrice} + ' lei'">0.0 lei</p>
+        </div>
+        <button type="submit" class="btn btn-submit">Plasează Comanda</button>
+        <a href="/cart/view" class="btn btn-back mt-2">Înapoi la Coș</a>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

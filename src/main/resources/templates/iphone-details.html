@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalii iPhone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar-custom {
+            background-color: #004080;
+            color: white;
+        }
+        .navbar-custom .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .navbar-custom .nav-link {
+            color: white;
+        }
+        .navbar-custom .nav-link:hover {
+            color: #ddd;
+        }
+        .container-content {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/iphones/view">Magazin iPhone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/cart/view">
+                        <i class="bi bi-cart"></i> Coșul meu
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <form th:action="@{/logout}" method="post" style="display: inline;">
+                        <button type="submit" class="btn btn-link nav-link" style="color: white;">
+                            <i class="bi bi-person"></i> Logout
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container container-content">
+    <h2 th:text="${iphone.modelName}">iPhone Model</h2>
+    <img th:src="${iphone.image}" alt="iPhone Image" class="product-image">
+    <p><strong>Culoare:</strong> <span th:text="${iphone.color}">Negru</span></p>
+    <p><strong>Stocare:</strong> <span th:text="${iphone.storage}">128 GB</span></p>
+    <p><strong>Preț:</strong> <span th:text="${iphone.price}">0 lei</span> lei</p>
+    <p><strong>Data lansării:</strong> <span th:text="${iphone.releaseDate}">2022-01-01</span></p>
+    <p><strong>Stoc:</strong> <span th:text="${iphone.stock}">50</span></p>
+    <a href="/iphones/view" class="btn btn-primary">Înapoi la listă</a>
+    <a th:href="@{/iphones/detail/{id}(id=${nextId})}" class="btn btn-secondary">Următorul produs</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
